@@ -93,7 +93,7 @@ def plot_results(data: pd.DataFrame, gap_start: int, gap_end: int, fs: int):
     OVERLAP_SIZE = 1000
     SEGMENT_SIZE = 2000
 
-    fig, ax = plt.subplots(nrows=6, ncols=1, figsize=(15, 80),
+    fig, ax = plt.subplots(nrows=6, ncols=1, figsize=(15, 40),
                            gridspec_kw={'height_ratios': [1, 1.5, 1, 1.5, 1, 1.5]})
 
     colors = ['tab:blue', 'tab:red', 'tab:purple']
