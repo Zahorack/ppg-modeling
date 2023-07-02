@@ -1,0 +1,10 @@
+/papers
+/venv
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+/ppg/notebooks/autoencoder.ipynb
+/ppg/notebooks/lstm.ipynb
+/ppg/notebooks/arima.ipynb

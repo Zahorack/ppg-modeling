@@ -1,0 +1,8 @@
+netCDF4
+matplotlib
+click
+scipy
+pandas
+scikit-learn
+tensorflow
+keras
