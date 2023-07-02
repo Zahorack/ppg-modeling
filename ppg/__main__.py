@@ -115,7 +115,11 @@ def merge(ts1: str,
         MinMaxScaler()
     ])
     df_merged = pd.DataFrame(postprocessing.process(np.array(merged)).T, columns=[c._name_ for c in WavelengthIndex])
-    df_merged.to_parquet(out or (config.DATA_DIR / 'output' / 'merged.parquet'))
+
+    try:
+        df_merged.to_parquet(out or (config.DATA_DIR / 'output' / 'merged.parquet'))
+    except ImportError as e:
+        _logger.error('Can\'t export merged time series.', exc_info=e)
 
     plot_results(df_merged, gap_start=ts1[DataColumn.PPG_CURVE].shape[1],
                  gap_end=(df_merged.shape[0] - ts2[DataColumn.PPG_CURVE].shape[1]), fs=fs)
