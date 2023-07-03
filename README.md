@@ -369,7 +369,7 @@ more real-world data. I have to choose some public open dataset with PPG data.
 - Statistical tests
 
 
-## Hypermarket tuning
+## Hyperparameter tuning
 Regarding evaluation strategies, I need to construct objectives if I will have time to run hyperparameter optimizations.
 This would be nice also for traditional models. https://optuna.org/
 
